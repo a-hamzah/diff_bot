@@ -1,5 +1,38 @@
-## Differential Drive Bot Repo
 
-This repo is being used for summer differential drive robot.
+# Differential Drive Robot [PK-BOT]
 
-1. color changed.
+A simple Differential Drive Robot simulated in gazebo.
+(Tested on humble and foxy)
+
+
+
+
+## Deployment
+
+To deploy this project run
+
+```bash
+  mkdir -p colcon_ws/src
+  cd colcon_ws/src
+  git clone https://github.com/a-hamzah/diff_bot.git
+  cd ..
+  colcon build
+```
+
+Launch gazebo simulation
+
+```bash
+  ros2 launch diff_bot launch_sim.launch.py
+```
+
+Run teleop twist keyboard node in a new terminal+
+
+```bash
+  ros2 run teleop_twist_keyboard teleop_twist_keyboard
+```
+
+For rviz, open a new terminal and type
+
+```bash
+  rviz2
+```
