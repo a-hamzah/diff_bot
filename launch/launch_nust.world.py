@@ -17,7 +17,7 @@ def generate_launch_description():
   pkg_share = FindPackageShare(package='diff_bot').find('diff_bot')
  
   # Set the path to the world file
-  world_file_name = 'cafe.world'
+  world_file_name = 'nust.world'
   world_path = os.path.join(pkg_share, 'worlds', world_file_name)
    
   # Set the path to the SDF model files.
@@ -51,8 +51,16 @@ def generate_launch_description():
     default_value=world_path,
     description='Full path to the world model file to load')
     
-  # Specify the actions
-   
+  # ---------------- Specify the actions TODO: -- 
+  rsp = IncludeLaunchDescription(
+                PythonLaunchDescriptionSource([os.path.join(pkg_share,'launch','rsp.launch.py')]), 
+                launch_arguments={'use_sim_time': 'true'}.items()
+    )
+  spawn_entity = Node(package='gazebo_ros', executable='spawn_entity.py',
+                        arguments=['-topic', 'robot_description',
+                                   '-entity', 'my_bot'],
+                        output='screen')
+ # ---------------------------------------------
   # Start Gazebo server
   start_gazebo_server_cmd = IncludeLaunchDescription(
     PythonLaunchDescriptionSource(os.path.join(pkg_gazebo_ros, 'launch', 'gzserver.launch.py')),
@@ -76,5 +84,7 @@ def generate_launch_description():
   # Add any actions
   ld.add_action(start_gazebo_server_cmd)
   ld.add_action(start_gazebo_client_cmd)
+  ld.add_action(rsp)
+  ld.add_action(spawn_entity)
  
   return ld
