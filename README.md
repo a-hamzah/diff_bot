@@ -9,6 +9,13 @@ A simple Differential Drive Robot simulated in gazebo.
 
 ## Deployment
 
+Install the following dependencies first
+
+```bash
+  pip install xacro
+  sudo apt install ros-foxy-gazebo-ros-pkgs
+```
+
 To deploy this project run
 
 ```bash
