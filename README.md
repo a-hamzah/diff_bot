@@ -30,6 +30,8 @@ Launch gazebo simulation
 
 ```bash
   ros2 launch diff_bot launch_sim.launch.py
+  OR
+  ros2 launch diff_bot nust_world.launch.py
 ```
 
 Run teleop twist keyboard node in a new terminal+
@@ -43,3 +45,4 @@ For rviz, open a new terminal and type
 ```bash
   rviz2
 ```
+In RVIZ, Click on add and select Robot Model, Change its topic to robot_description

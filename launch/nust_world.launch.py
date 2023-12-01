@@ -51,7 +51,7 @@ def generate_launch_description():
     default_value=world_path,
     description='Full path to the world model file to load')
     
-  # ---------------- Specify the actions TODO: -- 
+  # ---------------------------TODO: Added Manually
   rsp = IncludeLaunchDescription(
                 PythonLaunchDescriptionSource([os.path.join(pkg_share,'launch','rsp.launch.py')]), 
                 launch_arguments={'use_sim_time': 'true'}.items()
@@ -84,6 +84,7 @@ def generate_launch_description():
   # Add any actions
   ld.add_action(start_gazebo_server_cmd)
   ld.add_action(start_gazebo_client_cmd)
+  # TODO: Added Manualy
   ld.add_action(rsp)
   ld.add_action(spawn_entity)
  
