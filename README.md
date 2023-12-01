@@ -9,7 +9,7 @@ A simple Differential Drive Robot simulated in gazebo.
 
 ## Deployment
 
-Install the following dependencies first
+Install the following dependencies before running the project
 
 ```bash
   pip install xacro
