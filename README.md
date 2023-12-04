@@ -2,7 +2,7 @@
 # Differential Drive Robot [PK-BOT]
 
 A simple Differential Drive Robot simulated in gazebo.
-(Tested on humble and foxy)
+(Tested on ROS2 Foxy Only)
 
 
 
