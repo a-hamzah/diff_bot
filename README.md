@@ -50,3 +50,7 @@ In RVIZ, Click on add and select Robot Model, Change its topic to robot_descript
 ## Screenshots
 
 ![Screenshot from 2023-12-01 22-01-45](https://github.com/a-hamzah/diff_bot/assets/25130682/13536e3a-82b3-4dde-9bb0-2494d180ec17)
+
+## Future Work
+
+- Add rviz in launch file
