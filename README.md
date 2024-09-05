@@ -32,9 +32,11 @@ Launch gazebo simulation
   ros2 launch diff_bot launch_sim.launch.py
   OR
   ros2 launch diff_bot nust_world.launch.py
+  OR
+  ros2 launch diff_bot maze_world.launch.py
 ```
 
-Run teleop twist keyboard node in a new terminal+
+Run teleop twist keyboard node in a new terminal
 
 ```bash
   ros2 run teleop_twist_keyboard teleop_twist_keyboard
@@ -48,8 +50,10 @@ For rviz, open a new terminal and type
 In RVIZ, Click on add and select Robot Model, Change its topic to robot_description
 
 ## Screenshots
-
+1. Nust world
 ![Screenshot from 2023-12-01 22-01-45](https://github.com/a-hamzah/diff_bot/assets/25130682/13536e3a-82b3-4dde-9bb0-2494d180ec17)
+2. Maze world
+
 
 ## Future Work
 
